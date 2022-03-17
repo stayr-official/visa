@@ -9,23 +9,14 @@ const main = async () => {
   const ca = decodedSplitKey[1];
   const cert = decodedSplitKey[2];
 
-  const visaClient = visa(
-    {
-      key: key,
-      ca: ca,
-      cert: cert,
+  const visaClient = visa({ key, ca, cert }, process.env?.USERID || "", process.env?.PASSWORD || "", {
+    mode: "certification",
+    defaultParams: {
+      buyerID: process.env?.BUYERID || "",
+      clientID: process.env?.CLIENTID || "",
+      proxyPoolID: process.env?.PROXYPOOLID || "",
     },
-    process.env?.USERID || "",
-    process.env?.PASSWORD || "",
-    {
-      mode: "certification",
-      defaultParams: {
-        buyerID: process.env?.BUYERID || "",
-        clientID: process.env?.CLIENTID || "",
-        proxyPoolID: process.env?.PROXYPOOLID || "",
-      },
-    }
-  );
+  });
 
   try {
     const r = await visaClient.manageVirtualAccount(
