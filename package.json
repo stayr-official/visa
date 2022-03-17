@@ -1,0 +1,25 @@
+{
+  "name": "@stayr-official/visa",
+  "version": "1.0.0",
+  "description": "Api wrapper for visa",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "author": "Stayr",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "yarn format && tsc",
+    "format": "prettier --write **/*.ts"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "nanoid": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "prettier": "^2.6.0",
+    "ts-node": "^10.7.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.6.2"
+  }
+}
