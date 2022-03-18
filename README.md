@@ -20,7 +20,7 @@ const cert = fs.readFileSync("./certs/cert.pem");
 const ca = fs.readFileSync("./certs/DigiCertGlobalRootCA.pem");
 ```
 
-### 2. Encoding keys into Base64 separated by "`.`";
+### 2. Decoding keys from Base64 separated by "`.`";
 
 ```ts
 const decodedFullKey = Buffer.from(process.env?.KEY64 || "", "base64").toString();
