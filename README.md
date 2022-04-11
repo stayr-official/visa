@@ -16,8 +16,8 @@ There are two ways to import your certs & keys required for visa authentication.
 
 ```ts
 const key = fs.readFileSync("./certs/combined-live-key.pem");
-const cert = fs.readFileSync("./certs/cert.pem");
 const ca = fs.readFileSync("./certs/DigiCertGlobalRootCA.pem");
+const cert = fs.readFileSync("./certs/cert.pem");
 ```
 
 ### 2. Decoding keys from Base64 separated by "`.`";

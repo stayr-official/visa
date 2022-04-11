@@ -45,7 +45,6 @@ export const visa = (
   };
 
   const visaPossibleErrors = (responseData: any) => {
-    console.log("error check", responseData);
     if (responseData?.responses?.length) {
       const findErrorResponse = responseData.responses.find((r: any) => r.responseCode != "00");
       if (findErrorResponse) {

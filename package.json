@@ -1,14 +1,13 @@
 {
   "name": "@stayr-official/visa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Api wrapper for visa",
-  "main": "./dist/index.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "license": "MIT",
   "author": "Stayr",
-  "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "yarn format && tsc",
+    "build": "yarn format && tsc && cp README.md dist/README.md",
     "format": "prettier --write **/*.ts"
   },
   "dependencies": {
